@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ type }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="alert alert-{{type}}">
+        {{ message }}
+    </div>
+
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+
+{% endblock %}

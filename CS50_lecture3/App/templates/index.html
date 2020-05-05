@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flights
+{% endblock %}
+
+{% block body %}
+    <h1>Book a Flight</h1>
+    <!-- url_for('function_name') it is written the function name in the BackEnd which is going to be executed submitting the form -->
+    <form action="{{ url_for('book') }} " method="post">
+        <div class="form-group">
+            <select name="flight_id" class="form-control">
+                {% for flight in flights %}
+                    <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Passenger name">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Book Flight</button>
+        </div>
+    </form>
+{% endblock %}

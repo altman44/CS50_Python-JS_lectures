@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block style %}
+    <style>
+        form {
+            background-color: rgb(40, 202, 62);
+        }
+        input::placeholder {
+            color: blue;
+            opacity: .5;
+        }
+        #title {
+            text-align: center;
+            margin-top: 2rem;
+            color: rgb(40, 202, 62);
+            font-family: fantasy;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    Add Flight
+{% endblock %}
+
+{% block body %}
+    <h1 id="title">ADD FLIGHT</h1>
+    <div class="container p-4 mt-3 text-center border border-secondary rounded">
+        <form action="{{ url_for('addFlight') }}" method="post" class="form-FlightFields">
+            <div class="form-group">
+                <input id="origin" name = 'origin' type="text" placeholder="Origin">
+            </div>
+            <div class="form-group">
+                <input id="destination" name = 'destination' type="text" placeholder="Destination">
+            </div>
+            <div class="form-group">
+                <input id="duration" name = 'duration' type="number" placeholder="Duration">
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success mt-4">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .form-FlightFields {
+           width: 30%;
+           text-align: center;
+           margin: auto;
+           display: block;
+           margin-top: 1%;
+           padding: 2%;
+           border-radius: 10px;
+           padding-bottom: 1%;
+        }
+        input {
+            background-color: inherit;
+            border: 0;
+            border-bottom: 1px solid;
+            text-align: center;
+        }
+    </style>
+    {% block style %} {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} - Airline 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header bg-dark p-4">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('flights')}}" class="btn btn-light">See all flights</a>
+        <a href="{{ url_for('addFlights') }}" class="btn btn-success">Add flights</a>
+        <a href="{{ url_for('updateFlights') }}" class="btn btn-warning">Update Flights</a>
+    </header>
+
+    {% if message and type %}
+        <div class="alert alert-{{type}} text-center mt-3" style="width:40%;margin:auto;display:block;">
+            {{ message }}
+        </div>
+    {% endif %}
+
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>

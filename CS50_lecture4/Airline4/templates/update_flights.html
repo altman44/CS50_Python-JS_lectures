@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block style %}
+    <style>
+        .container {
+            text-align: center;
+            padding: 1%;
+        }
+        #form_data {
+            background-color: orange;
+        }
+        #title {
+            text-align: center;
+            font-family: fantasy;
+            color: orange;
+            margin-top: 2rem;
+        }
+        input::placeholder {
+            color:rgb(21, 21, 124);
+        }
+        #btn-update {
+            background-color: inherit;
+            color: white;
+            font-weight: bold;
+            margin-top: 2%;
+        }
+        #btn-update:hover{
+            background-color: white;
+            color: orange;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    Update Flights
+{% endblock %}
+
+{% block body %}
+    <h1 id="title">Update a Flight</h1>
+    <div class="container">
+        <form action="{{ url_for('loadDataFlight') }}" method="post"> 
+            <select name="id" onchange="this.form.submit()">
+                <option>Select a flight ID</option>
+                {% for flight in flights %}
+                    <option value="{{ flight.id }}">{{flight.id}}</option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+
+    {% if dataFlight %}
+        <div class="container">
+            <h1 style="color:rgb(21, 21, 124);font-family: monospace;">Flight N° {{ dataFlight.id }}</h1>
+            <div class="rounded">
+                <form action="{{ url_for('updateFlight') }}" id="form_data" class="form-FlightFields">
+                    <div class="form-group">
+                        <input name = "origin" type="text" value="{{ dataFlight.origin }}">
+                    </div>
+                    <div class="form-group">
+                        <input name = "destination" type="text" value="{{ dataFlight.destination }}">
+                    </div>
+                    <div class="form-group">
+                        <input name = "duration" type="number" value="{{ dataFlight.duration }}">
+                    </div>
+                    <div class="form-group">
+                        <button id="btn-update" type="submit" class="btn">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

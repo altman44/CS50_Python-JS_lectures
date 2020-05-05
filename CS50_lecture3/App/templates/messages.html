@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ type }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="alert alert-{{type}}">
+        {{ message }}
+    </div>
+    
+{% endblock %}
