@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5 - Colors0</title>
+</head>
+<body>
+    <h1 id="hello">Change my color!</h1>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Change font color to red
+            document.querySelector('#red').onclick = function() {
+                document.querySelector('#hello').style.color = 'red';
+            }
+
+            // Change font color to blue
+            document.querySelector('#blue').onclick = function() {
+                document.querySelector('#hello').style.color = 'blue';
+            }
+        });
+    </script>
+</body>
+</html>

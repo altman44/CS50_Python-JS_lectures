@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5 - Counter2</title>
+</head>
+<body>
+    <h1 id='counter'>0</h1>
+    <button>Count</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('button').onclick = count;
+        });
+
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector('#counter').innerHTML = counter;
+            if (counter % 10 == 0){
+                alert(`Counter is at ${counter}`);
+            }
+        }
+    </script>
+</body>
+</html>

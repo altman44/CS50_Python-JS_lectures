@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5 - Query</title>
+</head>
+<body>
+    <h2>Waiting click...</h>
+    <h2>It will not be changed (the querySelector selects the first h2 element)</h2>
+    <button onclick="clickMe()">Clicke me</button>
+
+    <script>
+        function clickMe(){
+            document.querySelector('h2').innerHTML = 'You clicked!';
+        }
+    </script>
+</body>
+</html>

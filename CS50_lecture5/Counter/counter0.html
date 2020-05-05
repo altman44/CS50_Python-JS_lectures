@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5 - Counter0</title>
+</head>
+<body>
+    <h3 id="h3"></h3>
+    <h1 id="counter">0</h1>
+    <button onclick="count()">Increment</button>
+
+    <script>
+        let counter = 0, maxCounter = 10;
+        document.querySelector('#h3').innerHTML = `Maximum Counter: ${maxCounter}`;
+
+        function count(){
+            counter++;
+            if (counter == maxCounter){
+                alert(`The counter got at ${counter}!`)
+                counter = 0;
+            } 
+            document.querySelector('#counter').innerHTML = counter;
+        }
+    </script>
+</body>
+</html>

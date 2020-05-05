@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5 - Ajax</title>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+<body>
+    <h1>Data received from localhost:3000/api. Look at API folder inside of Ajax folder</h1>
+    <form id="form">
+        <input id='id_book' type="text" autocomplete='off' autofocus placeholder="Book ID">
+        <input type="submit" value="Get data from book">
+    </form>
+    <br>
+    <form action="{{ url_for('getDataFromBook') }}" method="post">
+        <select name="id_book" onchange='this.form.submit()'>
+            {% for book in data %}
+                <option value="{{ book.id }}">{{ book.title }}</option>
+            {% endfor %}
+        </select>
+        <br>
+    </form>
+    <br>
+    <div id='result'>
+            
+    </div>
+</body>
+</html>
