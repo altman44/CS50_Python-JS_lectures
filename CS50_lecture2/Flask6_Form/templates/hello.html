@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block heading %}
+    Welcome to Hello page
+{% endblock %}
+
+{% block body %}
+    <h3>Hello {{ name }}</h3>
+
+    <form action="{{ url_for('insertar_datos') }}" method="post">
+        <input type="text" name="fullname" placeholder="Enter your fullname">
+        <input type="number" name="age" placeholder="Enter your age">
+        <button>Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block heading %}
+    Index
+{% endblock %}
+
+{% block body %}
+    <h1 style="color:blue;font-family: cursive;">Notes</h1>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="{{ url_for('index') }}" method="post">
+        <input type="text" name="note" placeholder="Enter your note">
+        <button>Add Note</button>
+    </form>
+{% endblock %}
