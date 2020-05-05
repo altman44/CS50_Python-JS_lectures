@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        @media (min-width: 700px) {
+            body {
+                background-color: red;
+            }
+        }
+        @media (max-width: 699px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media (min-width: 700px) {
+            h1::before {
+                content: "Welcome to Responsive Page";
+            }
+        }
+        @media (max-width: 699px) {
+            h1::before {
+                content: "Welcome";
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive - Lecture 1</title>
+</head>
+<body>
+    <a href="index.html">Go to Index</a>
+    <h1></h1>
+</body>
+</html>

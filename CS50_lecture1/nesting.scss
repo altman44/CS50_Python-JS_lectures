@@ -1,0 +1,20 @@
+// Compiling in nesting.css.map file
+// To compile constantly:
+// sass --watch nesting.scss:nesting.css */
+// To compile once:
+// sass nesting.scss nesting.css 
+// We can just change the variables and the nesting.css file will be changed
+$colorP: blue;
+$colorH1: red;
+
+div {
+    font-size: 18px;
+
+    p {
+        color: $colorP;
+    }
+
+    h1 {
+        color: $colorH1;
+    }
+}

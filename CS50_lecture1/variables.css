@@ -1,0 +1,12 @@
+.ul-customized {
+  font-size: 14px;
+  color: red;
+}
+
+.ol-customized {
+  font-size: 18px;
+  color: red;
+}
+
+/* variables.css.map is for my browser to understand the relationship between the css and the scss file */
+/*# sourceMappingURL=variables.css.map */

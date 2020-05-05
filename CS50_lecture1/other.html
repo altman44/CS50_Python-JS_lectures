@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    button {
+        background-color: green;
+    }
+    button:hover {
+        background-color: orange;
+        cursor: pointer;
+    }
+    a::before {
+        content: "\21d2";
+        font-weight: bold;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    ol > li {
+        color: blue;
+    }
+    ul li {
+        color: green;
+    }
+    p::selection {
+        background-color: yellow;
+        color: red;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other - Lecture 1</title>
+</head>
+<body>
+    <button>Click me!</button>
+    <ol>
+        <li><a href="index.html">Go to Index</a></li>
+        <ul>
+            <li>1° Item</li>
+            <li>2° Item</li>
+        </ul>
+        <li>Item three</li>
+        <ul>
+            <li>1° Item</li>
+            <li>2° Item</li>
+            <li>3° Item</li>
+        </ul>
+        <li>Item four</li>
+    </ol>
+    <br>
+    <p>Soy un texto</p>
+</body>
+</html>

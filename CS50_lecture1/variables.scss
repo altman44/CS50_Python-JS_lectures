@@ -1,0 +1,16 @@
+// Compiling in variables.css.map file
+// To compile constantly:
+// sass --watch variables.scss:variables.css 
+// To compile once:
+// sass variables.scss variables.css 
+
+$color: red;
+
+.ul-customized {
+    font-size: 14px;
+    color: $color;
+}
+.ol-customized {
+    font-size: 18px;
+    color: $color;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .row {
+            background-color: blueviolet;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 4 - Lecture 1</title>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <a href="index.html">Go to Index</a>
+    <h1>Welcome to Bootstrap 4</h1>
+   
+    <div class="alert alert-success">Good news!</div>
+    <div class="alert alert-primary">News!</div>
+    <div class="alert alert-danger">Bad news!</div>
+
+    <table class="table text-center table-bordered">
+        <thead class="bg-dark text-warning">
+            <tr>
+                <th>#</th>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody class="bg-light text-dark">
+            <tr>
+                <td>1</td>
+                <td>Milk</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cheese</td>
+                <td>$80</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Yogur</td>
+                <td>$50</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <div class="row border border-danger">
+        <div class="col-lg-3 col-sm-6"> <!-- "sm" or "lg" depends on the device's size -->
+            Column 1
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            Column 2
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            Column 3
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            Column 4            
+        </div>
+    </div>
+</body>
+</html>

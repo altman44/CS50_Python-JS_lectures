@@ -1,0 +1,29 @@
+// Compiling in inheritance.css.map file
+// To compile constantly:
+// sass --watch inheritance.scss:inheritance.css 
+// To compile once:
+// sass inheritance.scss inheritance.css 
+
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.success {
+    @extend %message;
+    background-color: rgb(70, 206, 70);
+}
+
+.warning {
+    @extend %message;
+    background-color: rgb(224, 194, 56);
+}
+
+.error {
+    @extend %message;
+    background-color: rgb(224, 40, 40);
+}
