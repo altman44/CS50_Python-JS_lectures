@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll - Lecture 6</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let p;
+        for (i = 1; i <= 100; i++) {
+            document.body.innerHTML += `<p>${i}</p>`;
+        }
+
+        });
+        
+        window.onscroll = () => {
+            console.log('----');
+            console.log(window.innerHeight);
+            console.log(window.scrollY);
+            console.log(document.body.offsetHeight);
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                document.querySelector('body').style.background = 'green';
+            } else { 
+                document.querySelector('body').style.background = 'white';
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

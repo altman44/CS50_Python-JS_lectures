@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice3 - Lecture 6</title>
+    <link rel="stylesheet" href="./dice.css">
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+    <input id="counter" type="number" placeholder="Number of Rolls" min="1" value="1">
+    <button id="roll">Roll</button>
+    <ul id="rolls"></ul>
+    
+    <script id="result" type="text/x-handlebars-template">
+        <li>
+            You rolled:
+            {{#each values}}
+            <img src="images/dice{{ this }}.jpg" title="{{ this }}" alt="{{ this }}">
+            {{/each}}
+            (Total: {{ total }})
+        </li>
+    </script>
+    <script src="./dice.js"></script>
+</body>
+</html>

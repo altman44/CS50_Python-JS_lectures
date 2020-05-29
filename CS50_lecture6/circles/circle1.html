@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle1 - Lecture 6</title>
+</head>
+<body>
+
+    <label for="input_circle">Circle</label>
+    <input id="input_circle" type="color">
+    <label for="input_rect">Rectangle</label>
+    <input id="input_rect" type="color">
+    <button>Change color of svg elements</button>
+
+    <svg id="svgRect"></svg>
+    <svg id="svgCircle" style="width: 100%; height: 800px;"></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>        
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('button').onclick = () => {
+                const colorCircle = document.querySelector('#input_circle').value;
+                const svgCircle = d3.select('#svgCircle');
+                const colorRect = document.querySelector('#input_rect').value;
+                const svgRect = d3.select('#svgRect');
+
+                svgCircle.append('circle')
+                    .attr('cx', 200)
+                    .attr('cy', 100)
+                    .attr('r', 90)
+                    .style('fill', colorCircle);
+
+                console.log(svgRect)
+                svgRect.append('rect')
+                    .attr('x', 10)
+                    .attr('y', 50)
+                    .attr('width', 400)
+                    .attr('height', 50)
+                    .style('fill', colorRect);
+            }
+        })
+
+
+    </script>
+</body>
+</html>
