@@ -1,5 +1,3 @@
-console.log('aba');
-
 document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#form').onsubmit = () => {
